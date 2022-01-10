@@ -1,0 +1,12 @@
+def f(x):
+	return 10-x**2
+
+def trap_int(ini,fin,num):
+	iter = (fin-ini)/num
+	print(iter)
+	sum=0
+	for i in range(0,num-1):
+		sum+=f(ini+iter*(i*0.5))*iter
+	return sum
+
+print(trap_int(-2,2,100000))
